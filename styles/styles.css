@@ -15,8 +15,7 @@ body {
 
 #cabecalho{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     background-color: var(--cor1);
     text-shadow: 0px 0px 4px rgb(0, 0, 0);
     letter-spacing: 1px;
@@ -24,21 +23,29 @@ body {
     margin-bottom: -1px;
     font-size: 1.1em;
     word-spacing: 7px;
+    justify-content: space-between;
+    position: relative;
+}
+#cabecalho #logo-header {
+    margin: auto;
+    position: relative;
+    height: 100px;
+    width: 100px;
 }
 #cabecalho #div-carrinho {
     background-color: var(--cor2);
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    position: fixed;
-    top: 10px;
-    right: 10px;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;  
     text-align: center;  
     border: 1px solid var(--cor4);
+    position: fixed;
+    right: 10px;
+    top: 10px;
 }
 #cabecalho #icone-carrinho {
     height: 30px;
@@ -57,6 +64,9 @@ body {
     margin: auto;
     padding: 0;
     font-family: "Aboreto", system-ui;
+    background-color: #E67E85;
+    text-shadow: 0px 0px 4px rgb(0, 0, 0);
+    letter-spacing: 1px;
 }
 nav #lista-menu{
     list-style: none;
@@ -65,7 +75,7 @@ nav #lista-menu{
     justify-content: space-evenly;
     flex-flow: row nowrap;
     width: 100%;
-    margin: auto;
+    margin-top: -1px;
     padding: 30px 0px;
     background-image: linear-gradient(to bottom, var(--cor1) , var(--cor2));
 }
@@ -196,7 +206,7 @@ article .cards:hover {
     transition: 0.3s;
     transform: scale(1.05);
 }
-footer #wpp {
+main #wpp {
     background-color: #921122;
     width: 70%;
     height: 45px;
@@ -205,26 +215,26 @@ footer #wpp {
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    position: fixed;
+    position: sticky;
     bottom: 10px;
-    left: 10px; 
+    left: 30px; 
     
 }
-footer #wpp a {
+main #wpp a {
     text-decoration: none;
 }
-footer #wpp p{
+main #wpp p{
     display: flex;
     align-items: center;
     color: var(--cor0);
     font-family: "Aboreto", system-ui;
     gap: 5px;
 }
-footer #wpp img{
+main #wpp img{
     display: flex;
     align-items: center;
 }
-footer #wpp p::before {
+main #wpp p::before {
     content: url(imagens/favicon-wpp.png);
     width: 20px;
     height: 20px;
