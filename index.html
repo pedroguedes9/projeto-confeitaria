@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="styles/imagens/logo-header-sem-fundo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart"
+    />
   </head>
   <body>
     <header>
@@ -21,45 +26,64 @@
           width="20%"
           height="10%"
         />
+
+        <div id="div-carrinho">
+          <a id="link-carrinho" href="#">
+            <img
+              id="icone-carrinho"
+              src="styles/imagens/carrinho-de-compras.png"
+              alt="icone-carrinho"
+            />
+          </a>
+        </div>
+
         <h1 id="titulo-header">Confeitaria Kelly Romero</h1>
-        <nav id="menu">
-        </nav>
       </div>
+      <nav id="menu">
+        <ul id="lista-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">Contato</a></li>
+          <li><a href="">Conta</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
       <div id="opcoes">
         <div id="bolos" class="fotos-header">
           <h1 class="titulo-opcoes">Bolos</h1>
-          <button class="botao-fotos">Clique aqui</button>
+          <a class="botao-fotos">Clique aqui</a>
         </div>
         <div id="doces" class="fotos-header">
           <h1 class="titulo-opcoes">Docinhos</h1>
-          <button class="botao-fotos">Clique aqui</button>
+          <a class="botao-fotos">Clique aqui</a>
         </div>
       </div>
       <article id="detalhamento">
         <div class="cards" id="card-1">
           <h2>Quem somos?</h2>
           <p>
-            Especialistas em bolos e doces personalizados, feitos com carinho para
-            celebrar seus momentos especiais.
+            Especialistas em bolos e doces personalizados, feitos com carinho
+            para celebrar seus momentos especiais.
           </p>
-        </div >
+          <img src="styles/imagens/pesssoas-sem-fundo.png" alt="" />
+        </div>
         <div class="cards" id="card-2">
           <h2>O que fazemos?</h2>
           <p>
             Criamos bolos e doces sob encomenda com opções personalizáveis, tudo
             de forma prática e rápida.
           </p>
+          <img src="styles/imagens/engrenagem.png" alt="" />
         </div>
-        <div class="cards" id="card-3"> 
+        <div class="cards" id="card-3">
           <h2>Nosso objetivo:</h2>
           <p>
-            Facilitar o processo de pedidos, dando autonomia e rapidez para nossos
-            clientes escolherem cada detalhe de seus bolos e doces de forma
-            simples e intuitiva.
+            Facilitar o processo de pedidos, dando autonomia e rapidez para
+            nossos clientes escolherem cada detalhe de seus bolos e doces de
+            forma simples e intuitiva.
           </p>
+          <img src="styles/imagens/alvo-com-flecha.png" alt="" />
         </div>
       </article>
     </main>

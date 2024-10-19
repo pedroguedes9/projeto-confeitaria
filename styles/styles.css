@@ -18,24 +18,79 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: var(--cor1);
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    text-shadow: 0px 0px 4px rgb(0, 0, 0);
+    letter-spacing: 1px;
     margin-bottom: 15px;
     padding: 5px;
+}
+#cabecalho #div-carrinho {
+    background-color: var(--cor2);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    text-align: center;  
+    border: 1px solid var(--cor4);
+}
+#cabecalho #icone-carrinho {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    margin-right: 2px;
 }
 #titulo-header {
     color: var(--cor3);
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.8em;
+    font-weight: 1000;
     margin: auto;
     padding: 0;
     font-family: "Aboreto", system-ui;
 }
-header > nav #menu{
-    
-}
-#lista-menu li {
+nav #lista-menu{
     list-style: none;
-    background-color: var(--cor4);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin: auto;
+    padding: 30px 0px;
+}
+
+nav #lista-menu li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor2);
+    height: 35px;
+    width: 20%;
+    border-radius: 16px;
+    cursor: pointer;
+}
+nav #lista-menu li:hover{
+    background-color: var(--cor3);
+    color: var(--cor4);
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+nav #lista-menu li:active{
+    background-color: var(--cor2);
+}
+nav #lista-menu a{
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1.3em;
+    
 }
 div #opcoes {
     display:flex ;
@@ -57,17 +112,25 @@ div .fotos-header {
     background-color: var(--cor4);
     margin: auto;
     margin-bottom: 20px;
+    margin-top: 20px;
     border-radius: 2%;
     font-size: 1.5em;
     color: #000000;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
 }
 div .fotos-header:hover {
-    transform: scale(1.05);
     transition: 0.3s;
+    transform: scale(1.05);
 }
-
+div .titulo-opcoes{
+    color:var(--cor1) ;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    font-family: "Aboreto", system-ui;
+}
 div .botao-fotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--cor1);
     color: var(--cor0);
     border: none;
@@ -80,12 +143,6 @@ div .botao-fotos {
     font-size: 0.8em;
     font-family: "Aboreto", system-ui;
     box-shadow: 0 0 black;
-}
-
-.titulo-opcoes{
-    color:var(--cor1) ;
-    text-shadow: 0px 0px 5px rgb(0, 0, 0);
-    font-family: "Aboreto", system-ui;
 }
 div .botao-fotos:hover {
     background-color: var(--cor2);
@@ -111,13 +168,28 @@ article {
     justify-content: space-evenly;
     border-radius: 20px;
 }
-article .cards {
+article .cards{
     background-color: var(--cor2);
     width: 80%;
     height: 250px;
     border-radius: 10px;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
     text-align: center;
+    font-family: "Aboreto", system-ui;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+article #card-3 {
+    height: 290px;
+}
+article .cards img {
+    width: 40px;
+    height: 40px;
+}
+article .cards:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 
 
