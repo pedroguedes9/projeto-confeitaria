@@ -9,7 +9,7 @@
 html {
     font-size: 1.3em;
 }
-ul #lista-menu a {
+ul #lista-menu li {
     height: calc(35 * 1.3);
 }
 div #opcoes {

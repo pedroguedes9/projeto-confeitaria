@@ -86,8 +86,12 @@ nav #lista-menu{
     padding: 30px 0px;
     background-image: linear-gradient(to bottom, var(--cor1) , var(--cor2));
 }
-
-nav #lista-menu a {
+nav #lista-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav #lista-menu li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,13 +102,13 @@ nav #lista-menu a {
     cursor: pointer;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
 }
-nav #lista-menu a:hover{
+nav #lista-menu li:hover{
     background-color: var(--cor3);
     color: var(--cor4);
     transition: 0.3s;
     transform: scale(1.05);
 }
-nav #lista-menu a:active{
+nav #lista-menu li:active{
     background-color: var(--cor2);
 }
 nav #lista-menu a{
