@@ -1,34 +1,86 @@
 @charset 'UTF-8';
-    html {
-        font-size: 1.3em;
-    }
-    main {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: center;
-    }
-    #opcoes {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        
-    }
+:root {
+    --cor0:#f5f5f5;
+    --cor1:#E67E85;
+    --cor2:#E44257;
+    --cor3:#E2AFA2;
+    --cor4:#000000; 
+}
+html {
+    font-size: 1.3em
+}
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+#cabecalho #div-carrinho {
+    height: 70px;
+    width: 70px; 
+}
+#cabecalho #icone-carrinho {
+    height: 40px;
+    width: 40px;
+}
+nav #lista-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0px;
+    margin-left: 0px;   
+}
+nav #lista-menu li {
+    border-radius: 0px;
+    box-shadow: none;
+    border-left: 1px solid black;
+    height: calc(43px);
+    width: 20%;
+}
+nav #lista-menu li:hover{
+    border: none;
+    background-color: var(--cor1);
+}
+nav #lista-menu >  #home {
+    border-left: none;
+    border-top-left-radius: 10px;
+}
+nav #lista-menu > #conta {
+    border-top-right-radius: 10px;
+}
+#opcoes {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#bolos{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#doces {
+    margin-bottom: 10px;
+}
 
+article {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 600px;
+}
+article .cards {
+    height: 400px ;
+    font-weight: 600;
+    width: 30%;
+}
 
-    article {
-        display: flex;
-        flex-flow: row nowrap;
-        height: 600px;
-    }
-    article .cards {
-        height: 400px ;
-        font-weight: 600;
-        width: 30%;
-    }
-    
-    article #card-3{
-        height: 400px ;
-    }
+article #card-3{
+    height: 400px ;
+}
 
-    
+main #wpp{
+    width: 40%;
+}
+

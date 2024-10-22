@@ -45,7 +45,13 @@ body {
     border: 1px solid var(--cor4);
     position: fixed;
     right: 10px;
-    top: 10px;
+    top: 10px
+    
+}
+#cabecalho #div-carrinho:hover {
+    background-color: var(--cor3);
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 #cabecalho #icone-carrinho {
     height: 30px;
@@ -261,12 +267,11 @@ footer{
     background-color: var(--cor1);
 }
 #contatos {
-    
     width: 90%;
     margin: auto;
     display: flex;
     flex-flow: column nowrap;
-    align-items: end;
+    align-items: center;
     justify-content: center;
 }
 
@@ -289,7 +294,7 @@ footer #acompanhe{
     width: 90%;
     margin: auto;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     
