@@ -87,7 +87,7 @@ nav #lista-menu{
     background-image: linear-gradient(to bottom, var(--cor1) , var(--cor2));
 }
 
-nav #lista-menu li{
+nav #lista-menu a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,13 +98,13 @@ nav #lista-menu li{
     cursor: pointer;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
 }
-nav #lista-menu li:hover{
+nav #lista-menu a:hover{
     background-color: var(--cor3);
     color: var(--cor4);
     transition: 0.3s;
     transform: scale(1.05);
 }
-nav #lista-menu li:active{
+nav #lista-menu a:active{
     background-color: var(--cor2);
 }
 nav #lista-menu a{
