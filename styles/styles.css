@@ -112,12 +112,10 @@ main {
     flex-flow: column nowrap;
     align-items: center;
 }
-div #opcoes {
-    display:flex ;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin: auto;
+#opcoes {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
 
 }
 div .fotos-main {
@@ -131,7 +129,6 @@ div .fotos-main {
     align-items: center;
     justify-content: center;
     background-color: var(--cor4);
-    margin: auto;
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 2%;
