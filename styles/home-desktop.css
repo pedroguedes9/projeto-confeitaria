@@ -35,9 +35,9 @@ nav #lista-menu {
 nav #lista-menu li {
     border-radius: 0px;
     box-shadow: none;
-    border-left: 1px solid black;
-    height: calc(43px);
+    height: 43px;
     width: 20%;
+    border-left: 1px solid black;
 }
 nav #lista-menu li:hover{
     border: none;
@@ -49,13 +49,10 @@ nav #lista-menu a {
     display: flex;  
     align-items: center;
     justify-content: center;
+    
 }
-nav #lista-menu a #home {
+nav > ul > li#home {
     border-left: none;
-    border-top-left-radius: 10px;
-}
-nav #lista-menu #conta {
-    border-top-right-radius: 10px;
 }
 #opcoes {
     display: flex;
