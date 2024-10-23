@@ -3,18 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teste Projeto</title>
-    <link rel="stylesheet" href="styles/styles.css" media="all" />
-    <link
-      rel="stylesheet"
-      href="styles/home-tablet.css"
-      media="screen and (min-width: 576px)"
-    />
-    <link
-      rel="stylesheet"
-      href="styles/home-desktop.css"
-      media="screen and (min-width: 1200px)"
-    />
+    <title>Confeitaria Kelly Romero</title>
+    <link rel="stylesheet" href="styles-mobile.css" media="all" />
+    <link rel="stylesheet" href="styles-tablet.css" media="all and (min-width: 576px)">
+    <link rel="stylesheet" href="styles-desktop.css" media="all and (min-width: 1200px)">
+
+    <link rel="stylesheet" href="styles/home/home-mobile.css" media="screen">
+    <link rel="stylesheet" href="styles/home/home-tablet.css" media="screen and (min-width: 576px)">
+    <link rel="stylesheet" href="styles/home/home-desktop.css" media="screen and (min-width: 1200px)">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,9 +56,9 @@
       </div>
       <nav id="menu">
         <ul id="lista-menu">
-          <li><a href="#" id="home" >Home</a></li>
+          <li id="home"><a href="#"  >Home</a></li>
           <li><a href="#contatos">Contato</a></li>
-          <li ><a href="" id="conta">Conta</a></li>
+          <li id="conta" ><a href="" >Conta</a></li>
         </ul>
       </nav>
     </header>
@@ -70,7 +67,7 @@
       <div id="opcoes">
         <div id="bolos" class="fotos-main">
           <h1 class="titulo-opcoes">Bolos</h1>
-          <a class="botao-fotos">Clique aqui</a>
+          <a class="botao-fotos" href="bolos.html">Clique aqui</a>
         </div>
         <div id="doces" class="fotos-main">
           <h1 class="titulo-opcoes">Docinhos</h1>
