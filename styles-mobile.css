@@ -75,6 +75,19 @@ body {
     letter-spacing: 4px;
     word-spacing: 7px; 
 }
+#subtitulo {
+    color: var(--cor3);
+    font-size: 2.1em;
+    font-weight: 1000;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    font-family: "Aboreto", system-ui;
+    background-color: var(--cor2);
+    width: min(87vw, 550px);
+    border-radius: 10px;
+}
 nav #lista-menu{
     list-style: none;
     display: flex;

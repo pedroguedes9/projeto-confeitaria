@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha Os Bolos</title>
+    <title>Bolos Simples</title>
     <link rel="stylesheet" href="styles-mobile.css" media="all" />
     <link rel="stylesheet" href="styles-tablet.css" media="all and (min-width: 576px)">
     <link rel="stylesheet" href="styles-desktop.css" media="all and (min-width: 1200px)">
 
-    <link rel="stylesheet" href="styles/bolos/bolos-mobile.css" media="screen">
-    <link rel="stylesheet" href="styles/bolos/bolos-tablet.css" media="screen and (min-width: 576px)">
-    <link rel="stylesheet" href="styles/bolos/bolos-desktop.css" media="screen and (min-width: 1200px)">
+    <link rel="stylesheet" href="styles/bolos/bolos-simples/bolo-simples-mobile.css" media="screen">
+    <link rel="stylesheet" href="styles/bolos/bolos-simples/bolo-simples-tablet.css" media="screen and (min-width: 576px)">
+    <link rel="stylesheet" href="styles/bolos/bolos-simples/bolo-simples-desktop.css" media="screen and (min-width: 1200px)">
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,6 +31,7 @@
 <body>
     <header>
         <div id="cabecalho">
+            <a href="bolos.html" id="voltar"><img src="styles/imagens/seta-esquerda.png" alt="voltar">Voltar</a>
             <img
                 src="styles/imagens/logo-header-sem-fundo.png"
                 alt=""
@@ -61,26 +62,58 @@
             </ul>
         </nav>
     </header>
-    
     <main>
-        <h2 id="subtitulo">Escolha seu bolo</h2>
-        <div id="opcoes">
-            <div class="escolha" id="escolha-bolo-simples">
-                <h2 class="titulo-opcoes">Bolo simples</h2>
-                <a href="bolo-simples.html" class="botao-fotos">Clique aqui</a>
-            </div>
-            <div class="escolha" id="escolha-bolo-decorado">
-                <h2 class="titulo-opcoes">Bolo decorado</h2>
-                <a href="bolos-decorados.html" class="botao-fotos">Clique aqui</a>
-            </div>
-        </div>
+        <h2 id="subtitulo">BOLOS SIMPLES</h2>
+
+        <form action="">
+            <fieldset>
+                <legend>Escolha um formato</legend>
+                
+                <label for="iformato-piscina">
+                    <input type="radio" name="escolha-formato" id="iformato-piscina" >
+                    <img src="styles/imagens/formato-padrao.jpeg" alt="" width="20%">
+                </label>
+                
+                
+                <label for="iformato-padrao">
+                    <input type="radio" name="escolha-formato" id="iformato-padrao" checked>
+                    <img src="styles/imagens/formato-piscina3.jpg" alt="" width="20%">
+                </label>
+
+                
+                <label for="iformato-vulcao">
+                    <input type="radio" name="escolha-formato" id="iformato-vulcao" checked>
+                    <img src="styles/imagens/formato-vulcao.jpeg" alt="" width="20%">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Escolha uma massa</legend>
+                <label for="imassa-chocolate">
+                    <input type="radio" name="escolha-massa" id="imassa-chocolate" checked>
+                    <img src="styles/imagens/massa-chocolate.jpeg" alt="" width="20%">
+                </label>
+
+                <label for="imassa-branca">
+                    <input type="radio" name="escolha-massa" id="imassa-branca">
+                    <img src="styles/imagens/massa-branca.jpg" alt="" width="20%">
+                </label>
+                
+                <label for="imassa-cenoura">
+                    <input type="radio" name="escolha-massa" id="imassa-cenoura">
+                    <img src="styles/imagens/massa-cenoura.jpg" alt="" width="20%">
+                </label>
+
+                <label for="imassa-red-velvet">
+                    <input type="radio" name="escolha-massa" id="imassa-red-velvet">
+                    <img src="styles/imagens/massa-red-velvet.jpg" alt="" width="20%">
+            </fieldset>
+        </form>
         <div id="wpp">
             <a href="">
                 <p>Entre em contato aqui</p>
             </a>
         </div>
     </main>
-
     <footer>
         <div id="contatos">
         <p>Email: kellyromero@gmail.com</p>

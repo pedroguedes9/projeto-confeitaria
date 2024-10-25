@@ -17,12 +17,6 @@ main {
     flex-flow: column nowrap;
     align-items: center;
 }
-#opcoes {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-
-}
 div .fotos-main {
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,8 +35,6 @@ div .fotos-main {
     color: #000000;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
 }
-
-
 div .fotos-main:hover {
     transition: 0.3s;
     transform: scale(1.05);
@@ -72,6 +64,8 @@ div .botao-fotos {
 }
 div .botao-fotos:hover {
     background-color: var(--cor2);
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 div .botao-fotos:active {
     background-color: var(--cor3);
@@ -117,6 +111,6 @@ article .cards img {
 article .cards:hover {
     transition: 0.3s;
     transform: scale(1.05);
-
+}
 
 

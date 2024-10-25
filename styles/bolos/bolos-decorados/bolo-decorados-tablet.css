@@ -12,13 +12,6 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-#opcoes {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-}
-main #wpp{
-    width: 40%;
+#voltar img {
+    width: 15px;
 }
