@@ -56,6 +56,9 @@ fieldset label {
     align-items: center;
     justify-content: center;
 }
+fieldset label:nth-last-child(1):nth-child(even) {
+    grid-column: span 2; 
+}
 fieldset p {
     display: inline;
     margin-bottom: -5px;

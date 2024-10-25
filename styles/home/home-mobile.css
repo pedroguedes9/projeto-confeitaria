@@ -71,10 +71,10 @@ div .botao-fotos:active {
     background-color: var(--cor3);
 }
 div #bolos {
-    background-image: url(/styles/imagens/foto-bolo-header.jpeg);
+    background-image: url(../imagens/foto-bolo-header.jpeg);
 }
 div #doces {
-    background-image: url(/styles/imagens/fotos-docinhos-header.jpeg);
+    background-image: url(../imagens/fotos-docinhos-header.jpeg);
     margin-top: 10px;
 }
 article {

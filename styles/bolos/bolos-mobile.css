@@ -72,10 +72,10 @@ div .botao-fotos:active {
     background-color: var(--cor3);
 }
 div #escolha-bolo-simples {
-    background-image: url(/styles/imagens/escolha-bolo-simples.jpeg);
+    background-image: url(../imagens/escolha-bolo-simples.jpeg);
 }	
 div #escolha-bolo-decorado {
-    background-image: url(/styles/imagens/escolha-bolo-decorado.jpeg);
+    background-image: url(../imagens/escolha-bolo-decorado.jpeg);
 }
 
 
