@@ -58,7 +58,7 @@ fieldset label {
 }
 fieldset p {
     display: inline;
-    
+    margin-bottom: -5px;
 }
 fieldset img {
     width: 60%;
