@@ -12,7 +12,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-@media all {
+@media all {  /* Mobile / Geral */
     #cabecalho{
         display: flex;
         flex-direction: row;
@@ -215,7 +215,7 @@ body {
         
     }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) { /*Tablet*/
     html {
         font-size: 1.3em;
     }
@@ -226,7 +226,7 @@ body {
         height: 30px;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) { /*Desktop*/
     main {
         display: flex;
         flex-flow: column nowrap;
