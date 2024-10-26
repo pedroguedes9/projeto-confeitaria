@@ -15,3 +15,13 @@ body {
 #voltar img {
     width: 15px;
 }
+
+fieldset{
+    max-width: 500px;
+}
+
+form input.botao-enviar{
+    padding: 20px 60px;
+    font-size: 1em;
+}
+

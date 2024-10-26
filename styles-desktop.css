@@ -58,3 +58,6 @@ nav #lista-menu li#home{
 nav #lista-menu  #conta{
     border-top-right-radius: 10px;
 }
+main #wpp{
+    width: 40%;
+}

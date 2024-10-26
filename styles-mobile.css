@@ -12,205 +12,271 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+@media all {
+    #cabecalho{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--cor1);
+        text-shadow: 0px 0px 4px rgb(0, 0, 0);
+        letter-spacing: 1px;
+        padding: 5px;
+        margin-bottom: -4px;
+        font-size: 1.1em;
+        word-spacing: 7px;
+        justify-content: space-between;
+        position: relative;
+    }
+    #cabecalho #logo-header {
+        margin: auto;
+        position: relative;
+        height: 100px;
+        width: 100px;
+    }
+    #cabecalho #div-carrinho {
+        background-color: var(--cor2);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        text-align: center;  
+        border: 1px solid var(--cor4);
+        position: fixed;
+        right: 10px;
+        top: 10px
+        
+    }
+    #cabecalho #div-carrinho:hover {
+        background-color: var(--cor3);
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
+    #cabecalho #icone-carrinho {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+        margin-right: 2px;
+    }
+    .titulo-header {
+        color: var(--cor3);
+        text-align: center;
+        font-size: 2em;
+        font-weight: 1000;
+        margin: auto;
+        padding: 0;
+        font-family: "Aboreto", system-ui;
+        background-color: #E67E85;
+        text-shadow: 0px 0px 4px rgb(0, 0, 0);
+        letter-spacing: 4px;
+        word-spacing: 7px; 
+    }
+    #subtitulo {
+        color: var(--cor3);
+        font-size: 2.1em;
+        font-weight: 1000;
+        margin: auto;
+        padding: 0;
+        text-align: center;
+        text-shadow: 0px 0px 2px rgb(0, 0, 0);
+        font-family: "Aboreto", system-ui;
+        background-color: var(--cor2);
+        width: min(87vw, 550px);
+        border-radius: 10px;
+    }
+    nav #lista-menu{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin-top: -1px;
+        padding: 30px 0px;
+        background-image: linear-gradient(to bottom, var(--cor1) , var(--cor2));
+    }
+    nav #lista-menu li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav #lista-menu li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cor3);
+        height: 35px;
+        width: max(calc(75px * 1.3), calc(10% * 1.3));
+        border-radius: 16px;
+        cursor: pointer;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
+    }
+    nav #lista-menu li:hover{
+        background-color: var(--cor3);
+        color: var(--cor4);
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
+    nav #lista-menu li:active{
+        background-color: var(--cor2);
+    }
+    nav #lista-menu a{
+        text-decoration: none;
+        color: var(--cor4);
+        font-size: 1.3em;
+        
+    }
+    main #wpp {
+        background-color: #921122;
+        width: 70%;
+        height: 45px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        position: sticky;
+        bottom: 10px;
+        left: 30px; 
+        margin: 10px 0 10px 0;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
+    }
+    main #wpp:hover {
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
+    main #wpp a {
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main #wpp p{
+        display: flex;
+        align-items: center;
+        color: var(--cor0);
+        font-family: "Aboreto", system-ui;
+        gap: 5px;
+    }
+    main #wpp img{
+        display: flex;
+        align-items: center;
+    }
+    main #wpp p::before {
+        content: url(styles/imagens/favicon-wpp.png);
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-#cabecalho{
-    display: flex;
-    flex-direction: row;
-    background-color: var(--cor1);
-    text-shadow: 0px 0px 4px rgb(0, 0, 0);
-    letter-spacing: 1px;
-    padding: 5px;
-    margin-bottom: -4px;
-    font-size: 1.1em;
-    word-spacing: 7px;
-    justify-content: space-between;
-    position: relative;
-}
-#cabecalho #logo-header {
-    margin: auto;
-    position: relative;
-    height: 100px;
-    width: 100px;
-}
-#cabecalho #div-carrinho {
-    background-color: var(--cor2);
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    text-align: center;  
-    border: 1px solid var(--cor4);
-    position: fixed;
-    right: 10px;
-    top: 10px
-    
-}
-#cabecalho #div-carrinho:hover {
-    background-color: var(--cor3);
-    transition: 0.3s;
-    transform: scale(1.05);
-}
-#cabecalho #icone-carrinho {
-    height: 30px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    margin-right: 2px;
-}
-.titulo-header {
-    color: var(--cor3);
-    text-align: center;
-    font-size: 2em;
-    font-weight: 1000;
-    margin: auto;
-    padding: 0;
-    font-family: "Aboreto", system-ui;
-    background-color: #E67E85;
-    text-shadow: 0px 0px 4px rgb(0, 0, 0);
-    letter-spacing: 4px;
-    word-spacing: 7px; 
-}
-#subtitulo {
-    color: var(--cor3);
-    font-size: 2.1em;
-    font-weight: 1000;
-    margin: auto;
-    padding: 0;
-    text-align: center;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
-    font-family: "Aboreto", system-ui;
-    background-color: var(--cor2);
-    width: min(87vw, 550px);
-    border-radius: 10px;
-}
-nav #lista-menu{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-flow: row nowrap;
-    width: 100%;
-    margin-top: -1px;
-    padding: 30px 0px;
-    background-image: linear-gradient(to bottom, var(--cor1) , var(--cor2));
-}
-nav #lista-menu li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-nav #lista-menu li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cor3);
-    height: 35px;
-    width: max(calc(75px * 1.3), calc(10% * 1.3));
-    border-radius: 16px;
-    cursor: pointer;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
-}
-nav #lista-menu li:hover{
-    background-color: var(--cor3);
-    color: var(--cor4);
-    transition: 0.3s;
-    transform: scale(1.05);
-}
-nav #lista-menu li:active{
-    background-color: var(--cor2);
-}
-nav #lista-menu a{
-    text-decoration: none;
-    color: var(--cor4);
-    font-size: 1.3em;
-    
-}
-main #wpp {
-    background-color: #921122;
-    width: 70%;
-    height: 45px;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    position: sticky;
-    bottom: 10px;
-    left: 30px; 
-    margin: 10px 0 10px 0;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.568);
-}
-main #wpp:hover {
-    transition: 0.3s;
-    transform: scale(1.05);
-}
-main #wpp a {
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-main #wpp p{
-    display: flex;
-    align-items: center;
-    color: var(--cor0);
-    font-family: "Aboreto", system-ui;
-    gap: 5px;
-}
-main #wpp img{
-    display: flex;
-    align-items: center;
-}
-main #wpp p::before {
-    content: url(styles/imagens/favicon-wpp.png);
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    footer{
+        background-color: var(--cor1);
+    }
+    #contatos {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
 
-footer{
-    background-color: var(--cor1);
-}
-#contatos {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-}
+    footer #acompanhe img{
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        
+    }
 
-footer #acompanhe img{
-    width: 20px;
-    height: 20px;
-    padding: 3px;
-    
-}
+    footer #acompanhe-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+        margin-top: -15px;
+    }
 
-footer #acompanhe-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row nowrap;
-    margin-top: -15px;
+    footer #acompanhe{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
 }
-
-footer #acompanhe{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
+@media screen and (min-width: 576px) {
+    html {
+        font-size: 1.3em;
+    }
+    ul #lista-menu li {
+        height: calc(35 * 1.3);
+    }
+    div #wpp {
+        height: 30px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #cabecalho #div-carrinho {
+        height: 70px;
+        width: 70px; 
+    }
+    #cabecalho #icone-carrinho {
+        height: 40px;
+        width: 40px;
+    }
+    nav #lista-menu {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 0px;
+        margin-left: 0px;   
+    }
+    nav #lista-menu li {
+        border-radius: 0px;
+        box-shadow: none;
+        height: 43px;
+        width: 20%;
+        border-left: 1px solid black;
+    }
+    nav #lista-menu li:hover{
+        border: none;
+        background-color: var(--cor1);
+    }
+    nav #lista-menu li a {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+    nav #lista-menu li#home{
+        border-left: none;
+        border-top-left-radius: 10px;
+    }
+    nav #lista-menu  #conta{
+        border-top-right-radius: 10px;
+    }
+    main #wpp{
+        width: 40%;
+    }
 }

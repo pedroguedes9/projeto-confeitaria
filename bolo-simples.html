@@ -5,16 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Bolos Simples</title>
         <link rel="stylesheet" href="styles-mobile.css" media="all" />
-        <link
-            rel="stylesheet"
-            href="styles-tablet.css"
-            media="all and (min-width: 576px)"
-        />
-        <link
-            rel="stylesheet"
-            href="styles-desktop.css"
-            media="all and (min-width: 1200px)"
-        />
 
         <link
             rel="stylesheet"
@@ -88,15 +78,15 @@
         <main>
             <h2 id="subtitulo">BOLOS SIMPLES</h2>
 
-            <form action="">
+            <form method="POST">
                 <fieldset>
                     <legend>Escolha um formato</legend>
 
                     <label for="iformato-padrao">
                         <p>Padrão</p>
-                        <input type="radio" name="escolha-formato" id="iformato-padrao" checked />
+                        <input type="radio" name="escolha-formato" id="iformato-padrao" value="Padrão" checked />
                         <img src="styles/imagens/formato-padrao.jpeg" alt="" width="20%" />
-
+                        <p class="preco">R$ 30,00</p>
                     </label>
 
                     <label for="iformato-piscina">
@@ -105,9 +95,10 @@
                             type="radio"
                             name="escolha-formato"
                             id="iformato-piscina"
-                            
+                            value="Piscina"
                         />
                         <img src="styles/imagens/formato-piscina3.jpg" alt="" width="20%" />
+                        <p class="preco">R$ 35,00</p>
                     </label>
 
                     <label for="iformato-vulcao">
@@ -116,20 +107,22 @@
                             type="radio"
                             name="escolha-formato"
                             id="iformato-vulcao"
-                            
+                            value="Vulcão"
                         />
                         <img src="styles/imagens/formato-vulcao.jpeg" alt="" width="20%" />
+                        <p class="preco">R$ 40,00</p>
                     </label>
 
                     <label for="iformato-coracao">
                         <p>Coração</p>
-                        <input type="radio" name="escolha-formato" id="iformato-coracao" />
+                        <input type="radio" name="escolha-formato" id="iformato-coracao" value="Coração" />
                         <img
                             src="styles/imagens/formato-coracao.png"
                             alt=""
                             width="20%"
                             id="imagem-coracao"
                         />
+                        <p class="preco">R$ 35,00</p>
                     </label>
                 </fieldset>
                 <fieldset>
@@ -140,26 +133,27 @@
                             type="radio"
                             name="escolha-massa"
                             id="imassa-chocolate"
-                            
+                            value="Chocolate"
+                            checked
                         />
                         <img src="styles/imagens/massa-chocolate.jpeg" alt="" width="20%" />
                     </label>
 
                     <label for="imassa-branca">
                         <p>Baunilha</p>
-                        <input type="radio" name="escolha-massa" id="imassa-branca" />
+                        <input type="radio" name="escolha-massa" id="imassa-branca" value="Baunilha"/>
                         <img src="styles/imagens/massa-branca.jpeg" alt="" width="20%" />
                     </label>
 
                     <label for="imassa-cenoura">
                         <p>Cenoura</p>
-                        <input type="radio" name="escolha-massa" id="imassa-cenoura" />
+                        <input type="radio" name="escolha-massa" id="imassa-cenoura" value="Baunilha" />
                         <img src="styles/imagens/massa-cenoura.jpeg" alt="" width="20%" />
                     </label>
 
                     <label for="imassa-red-velvet">
                         <p>Red Velvet</p>
-                        <input type="radio" name="escolha-massa" id="imassa-red-velvet" />
+                        <input type="radio" name="escolha-massa" id="imassa-red-velvet" value="Red Velvet" />
                         <img
                             src="styles/imagens/massa-red-velvet.jpeg"
                             alt=""
@@ -169,7 +163,7 @@
 
                     <label for="imassa-limao">
                         <p>Limão</p>
-                        <input type="radio" name="escolha-massa" id="imassa-limao" />
+                        <input type="radio" name="escolha-massa" id="imassa-limao" value="Limão" />
                         <img src="styles/imagens/massa-limao.jpeg" alt="" width="20%" />
                     </label>
                 </fieldset>
@@ -181,6 +175,7 @@
                             type="radio"
                             name="escolha-cobertura"
                             id="icobertura-chocolate"
+                            value="Chocolate"
                             checked
                         />
                         <img
@@ -191,11 +186,12 @@
                     </label>
 
                     <label for="icobertura-leite-ninho">
-                        <p>Leite ninho</p>
+                        <p>Ninho</p>
                         <input
                             type="radio"
                             name="escolha-cobertura"
                             id="icobertura-leite-ninho"
+                            value="Ninho"
                         />
                         <img
                             src="styles/imagens/cobertura-leite-ninho.jpeg"
@@ -211,6 +207,7 @@
                             type="radio"
                             name="escolha-cobertura"
                             id="icobertura-limao"
+                            value="Limão"
                         />
                         <img src="styles/imagens/cobertura-limao.jpeg" alt="" width="20%" />
                     </label>
@@ -221,6 +218,7 @@
                             type="radio"
                             name="escolha-cobertura"
                             id="icobertura-beijinho"
+                            value="Beijinho"
                         />
                         <img
                             src="styles/imagens/cobertura-beijinho.jpeg"
@@ -228,7 +226,20 @@
                             width="20%"
                         />
                     </label>
+
+                    <label for="isem-cobertura">
+                        <p>Sem cobertura</p>
+                        <input
+                            type="radio"
+                            name="escolha-cobertura"
+                            id="isem-cobertura"
+                            value="Sem Cobertura"
+                        />
+                        <img src="styles/imagens/sem-cobertura.jpeg" alt="" width="20%" />
+                        
+                    </label>
                 </fieldset>
+                <input type="submit" id="botao-bolo-simples" class="botao-enviar" value="Adicionar ao carrinho"></input>
             </form>
             <div id="wpp">
                 <a href="">
@@ -245,5 +256,9 @@
             </div>
         </footer>
     </body>
+    <script src="scripts/bolos/bolos-simples.js"></script>
+    <script src="scripts/carrinho.js"></script>
+    <script src="scripts/util.js"></script>
+
 </html>
 
