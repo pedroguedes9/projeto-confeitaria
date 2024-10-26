@@ -57,6 +57,186 @@
     </nav>
 </header>
 <main>
+    
+    <h2 id="subtitulo">BOLOS DECORADOS</h2>
+
+    <form method="POST">
+        <fieldset>
+            <legend>Escolha um formato</legend>
+
+            <label for="iformato-retangular">
+                <p>Retangular<br> 1 andar</p>
+                <input type="radio" name="escolha-formato" id="iformato-retangular" value="Retangular" checked />
+                <img src="styles/imagens/bolo-retangular.jpg" alt="" width="20%" />
+                <p class="preco">R$ 90,00</p>
+            </label>
+
+            <label for="iformato-redondo-1">
+                <p>Redondo <br>1 andar</p>
+                <input
+                    type="radio"
+                    name="escolha-formato"
+                    id="iformato-redondo-1"
+                    value="Redondo 1 andar"
+                />
+                <img src="styles/imagens/bolo-redondo-1.jpg" alt="" width="20%" />
+                <p class="preco">R$ 100,00</p>
+            </label>
+
+            <label for="iformato-redondo-2">
+                <p>Redondo <br>2 andares</p>
+                <input
+                    type="radio"
+                    name="escolha-formato"
+                    id="iformato-redondo-2"
+                    value="Redondo 2 andares"
+                />
+                <img src="styles/imagens/bolo-redondo-2.jpg" alt="" width="20%" />
+                <p class="preco">R$ 120,00</p>
+            </label>
+
+            <label for="iformato-redondo-3">
+                <p>Redondo <br>3 andares</p>
+                <input type="radio" name="escolha-formato" id="iformato-redondo-3" value="Redondo 3 andares" />
+                <img
+                    src="styles/imagens/bolo-redondo-3.jpg"
+                    alt=""
+                    width="20%"
+                    
+                />
+                <p class="preco">R$ 150,00</p>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Escolha uma massa</legend>
+            <label for="imassa-chocolate">
+                <p>Chocolate</p>
+                <input
+                    type="radio"
+                    name="escolha-massa"
+                    id="imassa-chocolate"
+                    value="Chocolate"
+                    checked
+                />
+                <img src="styles/imagens/massa-chocolate.jpeg" alt="" width="20%" />
+            </label>
+
+            <label for="imassa-branca">
+                <p>Baunilha</p>
+                <input type="radio" name="escolha-massa" id="imassa-branca" value="Baunilha"/>
+                <img src="styles/imagens/massa-branca.jpeg" alt="" width="20%" />
+            </label>
+
+            <label for="imassa-cenoura">
+                <p>Cenoura</p>
+                <input type="radio" name="escolha-massa" id="imassa-cenoura" value="Baunilha" />
+                <img src="styles/imagens/massa-cenoura.jpeg" alt="" width="20%" />
+            </label>
+
+            <label for="imassa-red-velvet">
+                <p>Red Velvet</p>
+                <input type="radio" name="escolha-massa" id="imassa-red-velvet" value="Red Velvet" />
+                <img
+                    src="styles/imagens/massa-red-velvet.jpeg"
+                    alt=""
+                    width="20%"
+                />
+            </label>
+
+            <label for="imassa-limao">
+                <p>Limão</p>
+                <input type="radio" name="escolha-massa" id="imassa-limao" value="Limão" />
+                <img src="styles/imagens/massa-limao.jpeg" alt="" width="20%" />
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Recheio</legend>
+            <label for="icobertura-chocolate">
+                <p>Chocolate</p>
+                <input
+                    type="radio"
+                    name="escolha-cobertura"
+                    id="icobertura-chocolate"
+                    value="Chocolate"
+                    checked
+                />
+                <img
+                    src="styles/imagens/cobertura-chocolate.jpg"
+                    alt=""
+                    width="20%"
+                />
+            </label>
+
+            <label for="icobertura-leite-ninho">
+                <p>Ninho</p>
+                <input
+                    type="radio"
+                    name="escolha-cobertura"
+                    id="icobertura-leite-ninho"
+                    value="Ninho"
+                />
+                <img
+                    src="styles/imagens/cobertura-leite-ninho.jpg"
+                    alt=""
+                    width="20%"
+                />
+            </label>
+
+
+            <label for="icobertura-limao">
+                <p>Limão</p>
+                <input
+                    type="radio"
+                    name="escolha-cobertura"
+                    id="icobertura-limao"
+                    value="Limão"
+                />
+                <img src="styles/imagens/cobertura-limao.jpg" alt="" width="20%" />
+            </label>
+
+            <label for="icobertura-beijinho">
+                <p>Beijinho</p>
+                <input
+                    type="radio"
+                    name="escolha-cobertura"
+                    id="icobertura-beijinho"
+                    value="Beijinho"
+                />
+                <img
+                    src="styles/imagens/cobertura-beijinho.jpg"
+                    alt=""
+                    width="20%"
+                />
+            </label>
+            <label for="icobertura-oreo">
+                <p>Oreo</p>
+                <input
+                    type="radio"
+                    name="escolha-cobertura"
+                    id="icobertura-oreo"
+                    value="Oreo"
+                />
+                <img
+                    src="styles/imagens/cobertura-oreo.jpg"
+                    alt=""
+                    width="20%"
+                />
+            </label>
+
+           
+        </fieldset>
+
+        <fieldset id="decoracao">
+            <legend>Decoração</legend>
+            <label for="anexo-decoracao">Anexe aqui a decoração escolhida e/ou descreva sua ideia num texto breve</label>
+            <div id="input-decoracao">
+                <input type="file">
+                <textarea name="descricao-decoracao" id="idescricao-decoracao" placeholder="Descreva aqui a sua ideia"></textarea>
+            </div>
+        </fieldset>
+
+        <input type="submit" id="botao-bolo-simples" class="botao-enviar" value="Adicionar ao carrinho"></input>
+    </form>
     <div id="wpp">
         <a href="">
             <p>Entre em contato aqui</p>
