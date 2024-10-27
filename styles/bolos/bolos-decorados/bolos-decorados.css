@@ -109,10 +109,11 @@
     }
 
     #decoracao #input-decoracao textarea{
-       height: 70px;
-       width: 70%;
-
-    }
+        height: 70px;
+        width: 70%;
+        resize: vertical;   
+        overflow-y: auto;
+    }   
 
     
     
