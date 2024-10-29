@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha Os Bolos</title>
+    <title>Seu Carrinho</title>
     <link rel="stylesheet" href="geral.css" media="all" />
-    <link rel="stylesheet" href="styles/bolos/bolos.css" media="screen">
+    <link rel="stylesheet" href="styles/carrinho/carrinho.css" media="screen">
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +34,7 @@
                 id="logo-header"
             />
             <div id="div-carrinho">
-                <a id="link-carrinho" href="carrinho.html">
+                <a id="link-carrinho" href="#">
                     <img
                         id="icone-carrinho"
                         src="styles/imagens/carrinho-de-compras.png"
@@ -56,26 +56,18 @@
             </ul>
         </nav>
     </header>
-    
     <main>
-        <h2 id="subtitulo">Escolha seu bolo</h2>
-        <div id="opcoes">
-            <div class="escolha" id="escolha-bolo-simples">
-                <h2 class="titulo-opcoes">Bolo simples</h2>
-                <a href="bolo-simples.html" class="botao-fotos">Clique aqui</a>
-            </div>
-            <div class="escolha" id="escolha-bolo-decorado">
-                <h2 class="titulo-opcoes">Bolo decorado</h2>
-                <a href="bolos-decorados.html" class="botao-fotos">Clique aqui</a>
-            </div>
+        <div >
+            <h1>Seu carrinho</h1>
+            <p id="carrinho"></p>
         </div>
+        
         <div id="wpp">
             <a href="">
                 <p>Entre em contato aqui</p>
             </a>
         </div>
     </main>
-
     <footer>
         <div id="contatos">
         <p>Email: kellyromero@gmail.com</p>
@@ -96,4 +88,8 @@
         </div>
     </footer>
 </body>
+    <script src="scripts/carrinho.js" defer></script>
+    <script src="scripts/util.js" defer></script>
+    <script src="scripts/bolos/bolos-decorados.js" defer></script>
+    <script src="scripts/bolos/bolos-simples.js" defer></script>
 </html>

@@ -5,9 +5,10 @@ function adicionarBoloDecoradoAoCarrinho (event) {
     const cobertura = document.querySelector('input[name="escolha-cobertura"]:checked').value
     const decoracaoArquivo = document.querySelector('input[type="file"]').files[0]
     const descricaoDecoracao = document.querySelector("#idescricao-decoracao").value
-    
     const formatoSelecionado = document.querySelector('input[name="escolha-formato"]:checked')
     const preco = formatoSelecionado.closest("label").querySelector(".preco").textContent
+    const caminhoImagem = formatoSelecionado.closest("label").querySelector("img").src
+    const nomeArquivoImagem = caminhoImagem.split("/").pop()
 
     const produto = {
         tipo: "Bolo Decorado",
@@ -19,6 +20,7 @@ function adicionarBoloDecoradoAoCarrinho (event) {
             descricao: descricaoDecoracao
         },
         preco,
+        nomeArquivoImagem
     }
     adicionarAoCarrinho(produto)
 }
