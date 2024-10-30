@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/doces/doces.css" />
     <link rel="stylesheet" href="geral.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="shortcut icon"
+        href="styles/imagens/favicon-logo.png"
+        type="image/x-icon"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart"
+    />
 
     <title>Doces</title>
   </head>
   <body>
     <header>
       <div id="cabecalho">
-        <a href="bolos.html" id="voltar"
+        <a href="index.html" id="voltar"
           ><img src="styles/imagens/seta-esquerda.png" alt="voltar" />Voltar</a
         >
         <img
@@ -59,12 +74,13 @@
             <input
               type="radio"
               name="escolha-doce"
-              id="idoce-brigadeiro"
+              id="ibrigadeiro"
               value="brigadeiro"
+              data-preco="1.00"
               checked
             />
-            <img src="" alt="" width="20%" />
-            <p>Unidade: R$<span class="preco">1.00</span> </p>
+            <img src="styles/imagens/doce-brigadeiro.jpeg" alt="" width="20%" />
+            <p>Unidade: R$ 1,00</span> </p>
           </label>
 
           <label for="ibeijinho">
@@ -72,12 +88,13 @@
             <input
               type="radio"
               name="escolha-doce"
-              id="idoce-beijinho"
+              id="ibeijinho"
               value="beijinho"
+              data-preco="1.00"
               
             />
-            <img src="" alt="" width="20%" />
-            <p>Unidade: R$<span class="preco">1.00</span> </p>
+            <img src="styles/imagens/doce-beijinho.jpg" alt="" width="20%" />
+            <p>Unidade: R$ 1,00</span> </p>
           </label>
 
           <label for="isurpresa-uva">
@@ -85,12 +102,13 @@
             <input
               type="radio"
               name="escolha-doce"
-              id="idoce-surpresa-uva"
+              id="isurpresa-uva"
               value="surpresa-uva"
+              data-preco="1.50"
               
             />
-            <img src="" alt="" width="20%" />
-            <p>Unidade: R$<span class="preco">1.00</span> </p>
+            <img src="styles/imagens/doce-surpresa-uva.jpg" alt="" width="20%" />
+            <p>Unidade: R$ 1,50 </p>
           </label>
 
           <label for="ibem-casado">
@@ -98,30 +116,45 @@
             <input
               type="radio"
               name="escolha-doce"
-              id="idoce-bem-casado"
+              id="ibem-casado"
               value="bem-casado"
+              data-preco="1.20"
               
             />
-            <img src="" alt="" width="20%" />
-            <p>Unidade: R$<span class="preco">1.00</span> </p>
+            <img src="styles/imagens/doce-bem-casado.jpg" alt="" width="20%" />
+            <p>Unidade: R$ 1,20 </p>
+          </label>
+
+          <label for="ibrigadeiro-ninho">
+            <p>Brigadeiro de Ninho</p>
+            <input
+              type="radio"
+              name="escolha-doce"
+              id="ibrigadeiro-ninho"
+              value="brigadeiro-ninho"
+              data-preco="1.20"
+              
+            />
+            <img src="styles/imagens/doce-ninho.jpg" alt="" width="20%" />
+            <p>Unidade: R$ 1,20 </p>
           </label>
         </fieldset>
 
         <fieldset>
           <legend>Quantidade</legend>
           <label for="iquantidade">
-            <input type="number" step="10" min="0" id="quantidade" oninput="calcularPreco()" />
+            <input type="number" step="10" min="0" id="quantidade" oninput="calcularPreco()" placeholder="0" />
           </label>
         </fieldset>
 
         <p>Total: <span id="precoTotal">R$ 0,00</span></p>
 
-        <div id="wpp">
-          <a href="">
-            <p>Entre em contato aqui</p>
-          </a>
-        </div>
       </form>
+      <div id="wpp">
+        <a href="">
+          <p>Entre em contato aqui</p>
+        </a>
+      </div>
     </main>
     <footer>
       <div id="contatos">
