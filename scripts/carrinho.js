@@ -1,13 +1,19 @@
 const BotaoLimparCarrinho = document.querySelector("#limpar-carrinho")
+const iconeNotificacao = document.querySelector("#icone-notificacao")
 BotaoLimparCarrinho.addEventListener("click", () => { 
     localStorage.clear()
     exibirCarrinho()
+    localStorage.setItem("carrinhoNotificacao", "false")
+    iconeNotificacao.style.display = "none"
 })
 // Função de adicionar produto ao localStorage
 function adicionarAoCarrinho(produto) {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []; // Pega o carrinho ou cria um vazio
     carrinho.push(produto); // Adiciona o produto ao carrinho
     localStorage.setItem("carrinho", JSON.stringify(carrinho)); // Salva o carrinho atualizado
+    localStorage.setItem("carrinhoNotificacao", "true"); // Define a notificação como ativa
+    iconeNotificacao.style.display = "block"
+    verificarNotificacaoCarrinho();
 }
 // Seleciona o elemento onde o carrinho será exibido
 const carrinhoDisplay = document.querySelector("#carrinho-display"); // O elemento HTML onde o carrinho será exibido
@@ -46,11 +52,11 @@ function exibirCarrinho() {
             <p>Arquivo: ${item.decoracao.arquivo || 'Nenhum arquivo'}</p>
         `;
         }
-        
-      
         carrinhoDisplay.appendChild(itemElemento); // Adiciona o item ao display do carrinho
     });
 }
 
 // Chama a função para exibir o carrinho ao carregar a página
-document.addEventListener("DOMContentLoaded", exibirCarrinho);
+document.addEventListener("DOMContentLoaded", () => {
+    exibirCarrinho()
+});

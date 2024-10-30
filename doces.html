@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/doces/doces.css">
-    <link rel="stylesheet" href="geral.css">
-
+    <link rel="stylesheet" href="styles/doces/doces.css" />
+    <link rel="stylesheet" href="geral.css" />
 
     <title>Doces</title>
   </head>
@@ -30,6 +29,7 @@
               alt="icone-carrinho"
             />
           </a>
+          <img src="styles/imagens/notificacao-carrinho.png" alt="" id="icone-notificacao">
         </div>
       </div>
       <div id="div-titulo">
@@ -48,45 +48,102 @@
     </header>
 
     <main>
-        <h2 id="subtitulo">BOLOS DECORADOS</h2>
+      <h2 id="subtitulo">DOCES</h2>
 
-            <form method="POST">
-                <fieldset>
-                    <legend>Escolha um formato</legend>
+      <form method="POST">
+        <fieldset>
+          <legend>Escolha o sabor</legend>
 
-                    <label for="iformato-retangular">
-                        <p>Retangular <br> 1 andar</p>
-                        <input type="radio" name="escolha-formato" id="iformato-retangular" value="Retangular" checked />
-                        <img src="styles/imagens/bolo-retangular.jpg" alt="" width="20%" />
-                        <p class="preco">R$ 90,00</p>
-                    </label>
+          <label for="ibrigadeiro">
+            <p>Brigadeiro</p>
+            <input
+              type="radio"
+              name="escolha-doce"
+              id="idoce-brigadeiro"
+              value="brigadeiro"
+              checked
+            />
+            <img src="" alt="" width="20%" />
+            <p>Unidade: R$<span class="preco">1.00</span> </p>
+          </label>
 
-                </fieldset>
-                <div id="wpp">
-                    <a href="">
-                        <p>Entre em contato aqui</p>
-                    </a>
-                </div>
+          <label for="ibeijinho">
+            <p>Beijinho</p>
+            <input
+              type="radio"
+              name="escolha-doce"
+              id="idoce-beijinho"
+              value="beijinho"
+              checked
+            />
+            <img src="" alt="" width="20%" />
+            <p>Unidade: R$<span class="preco">1.00</span> </p>
+          </label>
+
+          <label for="isurpresa-uva">
+            <p>Surpresa de uva</p>
+            <input
+              type="radio"
+              name="escolha-doce"
+              id="idoce-surpresa-uva"
+              value="surpresa-uva"
+              checked
+            />
+            <img src="" alt="" width="20%" />
+            <p>Unidade: R$<span class="preco">1.00</span> </p>
+          </label>
+
+          <label for="ibem-casado">
+            <p>Bem-casado</p>
+            <input
+              type="radio"
+              name="escolha-doce"
+              id="idoce-bem-casado"
+              value="bem-casado"
+              checked
+            />
+            <img src="" alt="" width="20%" />
+            <p>Unidade: R$<span class="preco">1.00</span> </p>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Quantidade</legend>
+          <label for="iquantidade">
+            <input type="number" step="10" min="0" id="quantidade" oninput="calcularPreco()" />
+          </label>
+        </fieldset>
+
+        <p>Total: <span id="precoTotal">R$ 0,00</span></p>
+
+        <div id="wpp">
+          <a href="">
+            <p>Entre em contato aqui</p>
+          </a>
+        </div>
+      </form>
     </main>
     <footer>
-        <div id="contatos">
-            <p>Email: kellyromero@gmail.com</p>
-            <p>Whatsapp: 11 11111-1111</p>
-            <p>Endereço: Rua X,</p>
-        </div>
+      <div id="contatos">
+        <p>Email: kellyromero@gmail.com</p>
+        <p>Whatsapp: 11 11111-1111</p>
+        <p>Endereço: Rua X,</p>
+      </div>
 
-        <div id="acompanhe">
-            <h4>ACOMPANHE</h4>
-            <div id="acompanhe-img">
-                <a href="https://www.instagram.com/">
-                <img src="styles/imagens/instagram.png" alt="" />
-                </a>
+      <div id="acompanhe">
+        <h4>ACOMPANHE</h4>
+        <div id="acompanhe-img">
+          <a href="https://www.instagram.com/">
+            <img src="styles/imagens/instagram.png" alt="" />
+          </a>
 
-                <a href="https://www.facebook.com">
-                <img src="styles/imagens/facebook (1).png" alt="" />
-                </a>
-            </div>
+          <a href="https://www.facebook.com">
+            <img src="styles/imagens/facebook (1).png" alt="" />
+          </a>
         </div>
+      </div>
     </footer>
   </body>
+  <script src="scripts/doces/preco.js"></script>
+  <script src="scripts/util.js"></script>
 </html>

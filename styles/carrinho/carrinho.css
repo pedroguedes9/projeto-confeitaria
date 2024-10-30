@@ -1,0 +1,14 @@
+:root {
+    --cor0:#f5f5f5;
+    --cor1:#E67E85;
+    --cor2:#E44257;
+    --cor3:#E2AFA2;
+    --cor4:#000000; 
+}
+@media all { /* mobile / geral */
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+}

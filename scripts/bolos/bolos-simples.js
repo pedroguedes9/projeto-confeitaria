@@ -25,3 +25,11 @@ function adicionarBoloSimplesAoCarrinho (event) {
     adicionadoAoCarrinho.textContent = `${numeroDeVezes} bolo(s) simples adicionado(s) ao carrinho!!`
 }
 document.querySelector("#botao-bolo-simples").addEventListener("click", adicionarBoloSimplesAoCarrinho)
+document.addEventListener("DOMContentLoaded", () => {
+    // Verifica a chave "carrinhoNotificacao" no localStorage
+    if (localStorage.getItem("carrinhoNotificacao") === "true") {
+        iconeNotificacao.style.display = "block"; // Exibe a notificação se houver itens
+    } else {
+        iconeNotificacao.style.display = "none"; // Oculta a notificação se estiver vazio
+    }
+});
