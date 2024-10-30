@@ -1,3 +1,4 @@
+let numeroDeVezes = 0
 function adicionarBoloSimplesAoCarrinho (event) {
     event.preventDefault()
     const formato = document.querySelector('input[name="escolha-formato"]:checked').value
@@ -6,6 +7,10 @@ function adicionarBoloSimplesAoCarrinho (event) {
 
     const formatoSelecionado = document.querySelector('input[name="escolha-formato"]:checked')
     const preco = formatoSelecionado.closest("label").querySelector(".preco").textContent
+    const caminhoImagem = formatoSelecionado.closest("label").querySelector("img").src
+    const nomeArquivoImagem = caminhoImagem.split("/").pop()
+    const adicionadoAoCarrinho = document.querySelector("#adicionado-ao-carrinho")
+
 
     const produto = {
         tipo: "Bolo Simples",
@@ -13,7 +18,10 @@ function adicionarBoloSimplesAoCarrinho (event) {
         massa,
         cobertura,
         preco,
+        nomeArquivoImagem,
     }
     adicionarAoCarrinho(produto)
+    numeroDeVezes += 1
+    adicionadoAoCarrinho.textContent = `${numeroDeVezes} bolo(s) simples adicionado(s) ao carrinho!!`
 }
 document.querySelector("#botao-bolo-simples").addEventListener("click", adicionarBoloSimplesAoCarrinho)

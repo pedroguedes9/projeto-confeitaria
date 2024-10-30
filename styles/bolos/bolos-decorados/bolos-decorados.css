@@ -60,6 +60,7 @@
     fieldset p {
         display: inline;
         margin-bottom: -5px;
+        text-align: center;
     }
     fieldset p.preco {
         display: inline;

@@ -1,3 +1,4 @@
+let numeroDeVezes = 0
 function adicionarBoloDecoradoAoCarrinho (event) {
     event.preventDefault()
     const formato = document.querySelector('input[name="escolha-formato"]:checked').value
@@ -9,6 +10,7 @@ function adicionarBoloDecoradoAoCarrinho (event) {
     const preco = formatoSelecionado.closest("label").querySelector(".preco").textContent
     const caminhoImagem = formatoSelecionado.closest("label").querySelector("img").src
     const nomeArquivoImagem = caminhoImagem.split("/").pop()
+    const adicionadoAoCarrinho = document.querySelector("#adicionado-ao-carrinho")
 
     const produto = {
         tipo: "Bolo Decorado",
@@ -23,5 +25,7 @@ function adicionarBoloDecoradoAoCarrinho (event) {
         nomeArquivoImagem
     }
     adicionarAoCarrinho(produto)
+    numeroDeVezes += 1
+    adicionadoAoCarrinho.textContent = `${numeroDeVezes} bolo(s) decorados adicionado(s) ao carrinho!!`
 }
 document.querySelector("#botao-bolo-decorado").addEventListener("click", adicionarBoloDecoradoAoCarrinho)

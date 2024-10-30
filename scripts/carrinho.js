@@ -1,3 +1,8 @@
+const BotaoLimparCarrinho = document.querySelector("#limpar-carrinho")
+BotaoLimparCarrinho.addEventListener("click", () => { 
+    localStorage.clear()
+    exibirCarrinho()
+})
 // Função de adicionar produto ao localStorage
 function adicionarAoCarrinho(produto) {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []; // Pega o carrinho ou cria um vazio
@@ -17,23 +22,32 @@ function exibirCarrinho() {
     carrinho.forEach(item => {
         const itemElemento = document.createElement("div");
         itemElemento.classList.add("item-carrinho");
-        
-        itemElemento.innerHTML = `
+
+        if(item.tipo == "Bolo Simples"){
+            itemElemento.innerHTML = `
             <h3>${item.tipo}</h3>
             <p>Formato: ${item.formato}</p>
             <p>Massa: ${item.massa}</p>
             <p>Cobertura: ${item.cobertura}</p>
             <p>Preço: ${item.preco}</p>
-            <p>Imagem: <img src="${item.nomeArquivoImagem}" alt="${item.tipo}" width="100"></p>
+            <p>Imagem: <img src="/styles/imagens/${item.nomeArquivoImagem}" alt="${item.tipo}" width="100"></p>
         `;
-        
-        if (item.tipo === "Bolo Decorado") {
-            itemElemento.innerHTML += `
-                <p>Decoração: ${item.decoracao.descricao || 'Nenhuma descrição'}</p>
-                <p>Arquivo: ${item.decoracao.arquivo || 'Nenhum arquivo'}</p>
-            `;
         }
 
+        if(item.tipo == "Bolo Decorado"){
+            itemElemento.innerHTML = `
+            <h3>${item.tipo}</h3>
+            <p>Formato: ${item.formato}</p>
+            <p>Massa: ${item.massa}</p>
+            <p>Recheio: ${item.cobertura}</p>
+            <p>Preço: ${item.preco}</p>
+            <p>Imagem: <img src="/styles/imagens/${item.nomeArquivoImagem}" alt="${item.tipo}" width="100"></p>
+            <p>Decoração: ${item.decoracao.descricao || 'Nenhuma descrição'}</p>
+            <p>Arquivo: ${item.decoracao.arquivo || 'Nenhum arquivo'}</p>
+        `;
+        }
+        
+      
         carrinhoDisplay.appendChild(itemElemento); // Adiciona o item ao display do carrinho
     });
 }

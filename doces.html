@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/doces/doces.css">
+    <link rel="stylesheet" href="geral.css">
+
+
+    <title>Doces</title>
+  </head>
+  <body>
+    <header>
+      <div id="cabecalho">
+        <a href="bolos.html" id="voltar"
+          ><img src="styles/imagens/seta-esquerda.png" alt="voltar" />Voltar</a
+        >
+        <img
+          src="styles/imagens/logo-header-sem-fundo.png"
+          alt=""
+          width="20%"
+          height="10%"
+          id="logo-header"
+        />
+        <div id="div-carrinho">
+          <a id="link-carrinho" href="carrinho.html">
+            <img
+              id="icone-carrinho"
+              src="styles/imagens/carrinho-de-compras.png"
+              alt="icone-carrinho"
+            />
+          </a>
+        </div>
+      </div>
+      <div id="div-titulo">
+        <h1 class="titulo-header">
+          Confeitaria <br />
+          Kelly Romero
+        </h1>
+      </div>
+      <nav id="menu">
+        <ul id="lista-menu">
+          <li id="home"><a href="index.html">Home</a></li>
+          <li><a href="#contatos">Contato</a></li>
+          <li id="conta"><a href="">Conta</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <h2 id="subtitulo">BOLOS DECORADOS</h2>
+
+            <form method="POST">
+                <fieldset>
+                    <legend>Escolha um formato</legend>
+
+                    <label for="iformato-retangular">
+                        <p>Retangular <br> 1 andar</p>
+                        <input type="radio" name="escolha-formato" id="iformato-retangular" value="Retangular" checked />
+                        <img src="styles/imagens/bolo-retangular.jpg" alt="" width="20%" />
+                        <p class="preco">R$ 90,00</p>
+                    </label>
+
+                </fieldset>
+                <div id="wpp">
+                    <a href="">
+                        <p>Entre em contato aqui</p>
+                    </a>
+                </div>
+    </main>
+    <footer>
+        <div id="contatos">
+            <p>Email: kellyromero@gmail.com</p>
+            <p>Whatsapp: 11 11111-1111</p>
+            <p>Endereço: Rua X,</p>
+        </div>
+
+        <div id="acompanhe">
+            <h4>ACOMPANHE</h4>
+            <div id="acompanhe-img">
+                <a href="https://www.instagram.com/">
+                <img src="styles/imagens/instagram.png" alt="" />
+                </a>
+
+                <a href="https://www.facebook.com">
+                <img src="styles/imagens/facebook (1).png" alt="" />
+                </a>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
