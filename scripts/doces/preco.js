@@ -1,8 +1,8 @@
 let numeroDeVezes = 0;
-
-function calcularPreco(){
-   const doce = document.querySelector('input[name="escolha-doce"]:checked');
-   const precoUnitario = parseFloat(doce.getAttribute('data-preco'));
+function calcularPreco(event){
+  event.preventDefault()
+  const doce = document.querySelector('input[name="escolha-doce"]:checked');
+  const precoUnitario = parseFloat(doce.getAttribute('data-preco'));
    const quantidade = parseInt(document.querySelector("#quantidade").value) || 0;
    const total = precoUnitario * quantidade;
    document.querySelector("#precoTotal").textContent = `R$ ${total.toFixed(2)}`
@@ -23,14 +23,16 @@ inputsRadio.forEach(input => {
 function adicionarDocesAoCarrinho(event){
   event.preventDefault();
   const doce = document.querySelector('input[name="escolha-doce"]:checked');
+  const precoUnitario = parseFloat(doce.getAttribute('data-preco'));
   const quantidade = parseInt(document.querySelector("#quantidade").value) || 0;
   const total = precoUnitario * quantidade;
   const caminhoImagem = doce.closest("label").querySelector("img").src;
   const adiocionadoAoCarrinho = document.querySelector("#adicionado-ao-carrinho");
+  const saborDoce = doce.value
 
   const produto = {
     tipo: "Doce",
-    doce,
+    saborDoce,
     quantidade,
     total,
   }

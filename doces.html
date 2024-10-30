@@ -143,12 +143,12 @@
         <fieldset>
           <legend>Quantidade</legend>
           <label for="iquantidade">
-            <input type="number" step="10" min="0" id="quantidade" oninput="calcularPreco()" placeholder="0" />
+            <input type="number" step="10" min="0" id="quantidade" oninput="calcularPreco(event)" placeholder="0" />
           </label>
         </fieldset>
 
         <p id="pTotal">Total: <span id="precoTotal">R$ 0,00</span></p>
-        <input type="submit" id="botao-doce" class="botao-enviar" value="Adicionar ao carrinho"></input>
+        <input type="submit" id="botao-doce" class="botao-enviar" value="Adicionar ao carrinho" onclick="adicionarDocesAoCarrinho(event)"></input>
         <p id="adicionado-ao-carrinho"></p>
 
       </form>
