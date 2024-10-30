@@ -1,9 +1,9 @@
 function calcularPreco(){
-    const precoUnitario = document.getElementsByClassName("preco");
-    const quantidade = document.getElementById("quantidade").value;
+
+    const precoString = document.querySelector(".preco");
+    const precoUnitario = parseFloat(precoString);
+    const quantidade = document.querySelector("#quantidade").value;
     const total = precoUnitario * quantidade;
-
-    
-
-    document.getElementById("precoTotal").textContent = `R$ ${total.toFixed(2)}`;
+    console.log(precoUnitario)
+    document.querySelector("#precoTotal").textContent = `R$ ${total.toFixed(2)}`;
 }
