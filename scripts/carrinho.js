@@ -52,6 +52,15 @@ function exibirCarrinho() {
             <p>Arquivo: ${item.decoracao.arquivo || 'Nenhum arquivo'}</p>
         `;
         }
+
+        if(item.tipo == "Doce"){
+            itemElemento.innerHTML = `
+            <h3>${item.tipo}</h3>
+            <p>Sabor: ${item.doce}</p>
+            <p>Quantidade: ${item.quantidade}</p>
+            <p>Preço: ${item.total}</p>
+            `;
+        }
         carrinhoDisplay.appendChild(itemElemento); // Adiciona o item ao display do carrinho
     });
 }
