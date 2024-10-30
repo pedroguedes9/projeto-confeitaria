@@ -108,6 +108,13 @@
         font-size: 16px;
     }
 
+    #pTotal{
+        border: solid 2px var(--cor1);
+        border-radius: 5px;
+        padding: 7px;
+
+    }
+
 
     
 }
