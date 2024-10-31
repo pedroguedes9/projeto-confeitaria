@@ -36,7 +36,7 @@ function exibirCarrinho() {
             <p>Massa: ${item.massa}</p>
             <p>Cobertura: ${item.cobertura}</p>
             <p>Preço: ${item.preco}</p>
-            <p>Imagem: <img src="/styles/imagens/${item.nomeArquivoImagem}" alt="${item.tipo}" width="100"></p>
+            <p>Imagem: <img src="../styles/imagens/${item.nomeArquivoImagem}" alt="${item.tipo}" width="100"></p>
         `;
         }
 
@@ -47,7 +47,7 @@ function exibirCarrinho() {
             <p>Massa: ${item.massa}</p>
             <p>Recheio: ${item.cobertura}</p>
             <p>Preço: ${item.preco}</p>
-            <p>Imagem: <img src="/styles/imagens/${item.nomeArquivoImagem}" alt="${item.tipo}" width="100"></p>
+            <p>Imagem: <img src="../styles/imagens/${item.nomeArquivoImagem}" alt="${item.tipo}" width="100"></p>
             <p>Decoração: ${item.decoracao.descricao || 'Nenhuma descrição'}</p>
             <p>Arquivo: ${item.decoracao.arquivo || 'Nenhum arquivo'}</p>
         `;
