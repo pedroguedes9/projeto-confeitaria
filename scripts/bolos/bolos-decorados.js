@@ -22,7 +22,7 @@ function adicionarBoloDecoradoAoCarrinho (event) {
             descricao: descricaoDecoracao
         },
         preco,
-        nomeArquivoImagem
+        caminhoImagem
     }
     adicionarAoCarrinho(produto)
     numeroDeVezes += 1

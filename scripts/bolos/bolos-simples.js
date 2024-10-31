@@ -18,7 +18,7 @@ function adicionarBoloSimplesAoCarrinho (event) {
         massa,
         cobertura,
         preco,
-        nomeArquivoImagem,
+        caminhoImagem,
     }
     adicionarAoCarrinho(produto)
     numeroDeVezes += 1
