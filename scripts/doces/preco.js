@@ -37,7 +37,7 @@ function adicionarDocesAoCarrinho(event){
     total,
   }
   adicionarAoCarrinho(produto)
-  numeroDeVezes += quantidade
+  numeroDeVezes = quantidade
   adiocionadoAoCarrinho.textContent = `${numeroDeVezes} doce(s) adiocionado(s) ao carrinho!!`
 }
 
