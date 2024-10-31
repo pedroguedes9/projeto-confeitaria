@@ -11,4 +11,55 @@
         flex-flow: column nowrap;
         align-items: center;
     }
+    button#limpar-carrinho {
+        margin: 10px;
+        padding: 5px;
+        background-color: var(--cor1);
+        color: var(--cor0);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.8em;
+        width: 150px;
+        height: 30px;
+    }
+    button#limpar-carrinho:hover {
+        background-color: var(--cor2);
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
+    div#carrinho-display {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 60%;
+    }
+    div.item-carrinho {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        border: 1px solid var(--cor2);
+    }
+
+    div.item-carrinho button{
+        margin: 10px;
+        padding: 5px;
+        background-color: var(--cor1);
+        color: var(--cor0);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.8em;
+        width: 150px;
+        height: 30px;
+    }
+
+    div.item-carrinho button:hover{
+        background-color: var(--cor2);
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
 }

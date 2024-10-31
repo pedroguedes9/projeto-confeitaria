@@ -35,6 +35,7 @@ function adicionarDocesAoCarrinho(event){
     saborDoce,
     quantidade,
     total,
+    caminhoImagem
   }
   adicionarAoCarrinho(produto)
   numeroDeVezes = quantidade
