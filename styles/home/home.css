@@ -95,6 +95,7 @@
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        font-weight: bold;
     }
     article #card-3 {
         height: 290px;
