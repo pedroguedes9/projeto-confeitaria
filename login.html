@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confeitaria Kelly Romero</title>
+    <title>Seu Carrinho</title>
     <link rel="stylesheet" href="geral.css" media="all" />
-    <link rel="stylesheet" href="styles/home/home.css" media="screen" />
+    <link rel="stylesheet" href="styles/conta/conta.css" media="screen" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,16 +33,6 @@
           height="10%"
           id="logo-header"
         />
-        <div id="div-carrinho">
-          <a id="link-carrinho" href="carrinho.html">
-            <img
-              id="icone-carrinho"
-              src="styles/imagens/carrinho-de-compras.png"
-              alt="icone-carrinho"
-            />
-          </a>
-          <img src="styles/imagens/notificacao-carrinho.png" alt="" id="icone-notificacao">
-        </div>
       </div>
       <div id="div-titulo">
         <h1 class="titulo-header">
@@ -52,51 +42,27 @@
       </div>
       <nav id="menu">
         <ul id="lista-menu">
-          <li id="home"><a href="#">Home</a></li>
+          <li id="home"><a href="index.html">Home</a></li>
           <li><a href="#contatos">Contato</a></li>
           <li id="conta"><a href="cadastro.html">Conta</a></li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <div id="opcoes">
-        <div id="bolos" class="fotos-main">
-          <h1 class="titulo-opcoes">Bolos</h1>
-          <a class="botao-fotos" href="bolos.html">Clique aqui</a>
-        </div>
-        <div id="doces" class="fotos-main">
-          <h1 class="titulo-opcoes">Docinhos</h1>
-          <a class="botao-fotos" href="doces.html">Clique aqui</a>
-        </div>
-      </div>
-      <article id="detalhamento">
-        <div class="cards" id="card-1">
-          <h2>Quem somos?</h2>
-          <p>
-            Especialistas em bolos e doces personalizados, feitos com carinho
-            para celebrar seus momentos especiais.
-          </p>
-          <img src="styles/imagens/pesssoas-sem-fundo.png" alt="" />
-        </div>
-        <div class="cards" id="card-2">
-          <h2>O que fazemos?</h2>
-          <p>
-            Criamos bolos e doces sob encomenda com opções personalizáveis, tudo
-            de forma prática e rápida.
-          </p>
-          <img src="styles/imagens/engrenagem.png" alt="" />
-        </div>
-        <div class="cards" id="card-3">
-          <h2>Nosso objetivo:</h2>
-          <p>
-            Facilitar o processo de pedidos, dando autonomia e rapidez para
-            nossos clientes escolherem cada detalhe de seus bolos e doces de
-            forma simples e intuitiva.
-          </p>
-          <img src="styles/imagens/alvo-com-flecha.png" alt="" />
-        </div>
-      </article>
+      <h2 id="subtitulo">Minha conta</h2>
+
+      <form id="form-login" action="" autocomplete="on">
+        <h3>Login</h3>
+
+        <label for="">E-mail</label>
+        <input type="email" autocomplete="email" />
+
+        <label for="">Senha</label>
+        <input type="password" autocomplete="pass" />
+
+        <button type="submit" class="botao-1">Entrar</button>
+        <button id="botao-cadastro" class="botao-2"><a href="cadastro.html">Não tenho cadastro</a></button>
+      </form>
       <div id="wpp">
         <a href="">
           <p>Entre em contato aqui</p>
@@ -116,7 +82,6 @@
           <a href="https://www.instagram.com/">
             <img src="styles/imagens/instagram.png" alt="" />
           </a>
-
           <a href="https://www.facebook.com">
             <img src="styles/imagens/facebook (1).png" alt="" />
           </a>
@@ -124,5 +89,8 @@
       </div>
     </footer>
   </body>
-  <script src="scripts/util.js"></script>
+
+  <script src="scripts/util.js" defer></script>
+  <script src="scripts/bolos/bolos-decorados.js" defer></script>
+  <script src="scripts/bolos/bolos-simples.js" defer></script>
 </html>

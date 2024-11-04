@@ -1,11 +1,14 @@
 const BotaoLimparCarrinho = document.querySelector("#limpar-carrinho")
 const iconeNotificacao = document.querySelector("#icone-notificacao")
+const total = document.querySelector("#total-valor")
 BotaoLimparCarrinho.addEventListener("click", () => { 
     localStorage.clear()
     exibirCarrinho()
     localStorage.setItem("carrinhoNotificacao", "false")
     iconeNotificacao.style.display = "none"
 })
+
+    
 // Função para remover item do carrinho
 function removerItemCarrinho(indice) {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -26,62 +29,81 @@ function adicionarAoCarrinho(produto) {
 const carrinhoDisplay = document.querySelector("#carrinho-display"); // O elemento HTML onde o carrinho será exibido
 
 function exibirCarrinho() {
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []; // Pega o carrinho do localStorage ou cria vazio
-    
-    // Limpa o conteúdo atual do carrinho antes de exibir
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    let valorTotal = 0;
     carrinhoDisplay.innerHTML = "";
 
-    // Loop pelos itens do carrinho e exibe cada um
+    function formatarPreco(preco) {
+        return parseFloat(preco.replace("R$", "").replace(",", "."));
+    }
+
     carrinho.forEach((item, indice) => {
         const itemElemento = document.createElement("div");
         itemElemento.classList.add("item-carrinho");
 
-        if(item.tipo == "Bolo Simples"){
-            itemElemento.innerHTML = `
-            <h3>${item.tipo}</h3>
-            <p>Formato: ${item.formato}</p>
-            <p>Massa: ${item.massa}</p>
-            <p>Cobertura: ${item.cobertura}</p>
-            <p>Preço: R$ ${item.preco}</p>
-            <p><img src="${item.caminhoImagem}" alt="${item.tipo}" width="100"></p>
-            <button class="excluir-item" data-indice="${indice}">Excluir item</button>
-        `;
+        let precoItem = 0;
+        if (item.tipo === "Bolo Simples" || item.tipo === "Bolo Decorado") {
+            precoItem = formatarPreco(item.preco);
+        } else if (item.tipo === "Doce") {
+            precoItem = parseFloat(item.total) || 0;
         }
 
-        if(item.tipo == "Bolo Decorado"){
+        if (item.tipo === "Bolo Simples") {
             itemElemento.innerHTML = `
             <h3>${item.tipo}</h3>
-            <p>Formato: ${item.formato}</p>
-            <p>Massa: ${item.massa}</p>
-            <p>Recheio: ${item.cobertura}</p>
-            <p>Preço: R$ ${item.preco}</p>
-            <p>Decoração: ${item.decoracao.descricao || 'Nenhuma descrição'}</p>
-            <p>Arquivo: ${item.decoracao.arquivo || 'Nenhum arquivo'}</p>
-            <p><img src="${item.caminhoImagem}" alt="${item.tipo}" width="100"></p>
-            <button class="excluir-item" data-indice="${indice}">Excluir item</button>
-        `;
-        }
-
-        if(item.tipo == "Doce"){
-            itemElemento.innerHTML = `
-            <h3>${item.tipo}</h3>
-            <p>Sabor: ${item.saborDoce}</p>
-            <p>Quantidade: ${item.quantidade}</p>
-            <p>Preço: R$ ${item.total}</p>
+            <p><strong>Formato:</strong> ${item.formato}</p>
+            <p><strong>Massa:</strong> ${item.massa}</p>
+            <p><strong>Cobertura:</strong> ${item.cobertura}</p>
+            <p><strong>Preço:</strong> ${item.preco}</p>
             <p><img src="${item.caminhoImagem}" alt="${item.tipo}" width="100"></p>
             <button class="excluir-item" data-indice="${indice}">Excluir item</button>
             `;
+            valorTotal += precoItem;
         }
-        carrinhoDisplay.appendChild(itemElemento); // Adiciona o item ao display do carrinho
-    });
-    // Adiciona o evento de exclusão para cada botão "Excluir item"
-    document.querySelectorAll(".excluir-item").forEach(button => {
-        button.addEventListener("click", () => {
-            const indice = button.getAttribute("data-indice");
-            removerItemCarrinho(indice);
+
+        if (item.tipo === "Bolo Decorado") {
+            itemElemento.innerHTML = `
+            <h3>${item.tipo}</h3>
+            <p><strong>Formato:</strong> ${item.formato}</p>
+            <p><strong>Massa:</strong> ${item.massa}</p>
+            <p><strong>Recheio:</strong> ${item.cobertura}</p>
+            <p><strong>Preço:</strong> ${item.preco}</p>
+            <p><strong>Decoração:</strong> ${item.decoracao.descricao || 'Nenhuma descrição'}</p>
+            <p><strong>Arquivo:</strong> ${item.decoracao.arquivo || 'Nenhum arquivo'}</p>
+            <p><img src="${item.caminhoImagem}" alt="${item.tipo}" width="100"></p>
+            <button class="excluir-item" data-indice="${indice}">Excluir item</button>
+            `;
+            valorTotal += precoItem;
+        }
+
+        if (item.tipo === "Doce") {
+            itemElemento.innerHTML = `
+            <h3>${item.tipo}</h3>
+            <p><strong>Sabor:</strong> ${item.saborDoce}</p>
+            <p><strong>Quantidade:</strong> ${item.quantidade}</p>
+            <p><strong>Preço:</strong>  ${item.total}</p>
+            <p><img src="${item.caminhoImagem}" alt="${item.tipo}" width="100"></p>
+            <button class="excluir-item" data-indice="${indice}">Excluir item</button>
+            `;
+            valorTotal += precoItem;
+        }
+
+        // Adiciona o item ao display do carrinho
+        carrinhoDisplay.appendChild(itemElemento);
+
+        // Adiciona o evento de clique ao botão de exclusão
+        const botaoExcluir = itemElemento.querySelector(".excluir-item");
+        botaoExcluir.addEventListener("click", () => {
+            removerItemCarrinho(indice); // Passa o índice para a função de remoção
         });
     });
+
+    // Atualiza o valor total com "R$" e duas casas decimais
+    total.textContent = ` ${valorTotal.toFixed(2)}`;
 }
+
+
+
 
 // Chama a função para exibir o carrinho ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {

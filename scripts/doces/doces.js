@@ -5,7 +5,7 @@ function calcularPreco(event){
   const precoUnitario = parseFloat(doce.getAttribute('data-preco'));
    const quantidade = parseInt(document.querySelector("#quantidade").value) || 0;
    const total = precoUnitario * quantidade;
-   document.querySelector("#precoTotal").textContent = `R$ ${total.toFixed(2)}`
+   document.querySelector("#precoTotal").textContent = ` ${total.toFixed(2)}`
    
 }
 
