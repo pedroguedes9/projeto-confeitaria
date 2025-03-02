@@ -6,6 +6,7 @@
     --cor3:#E2AFA2;
     --cor4:#000000; 
 }
+
 @media all { /* Mobile/ Geral*/
     main {
         display: flex;
